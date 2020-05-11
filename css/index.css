@@ -200,6 +200,9 @@ header h3 {
 @media (max-width: 500px) {
   header h3 {
     padding: 5% 2%;
+    border-bottom: 1px solid #4c5c68;
+    width: 100%;
+    text-align: center;
   }
 }
 header p {
@@ -222,7 +225,6 @@ header h4 {
 @media (max-width: 500px) {
   header h4 {
     font-size: 2rem;
-    border-bottom: 1px solid #4c5c68;
   }
 }
 header ul {
@@ -353,4 +355,9 @@ footer table tr:nth-child(even) {
   background-color: #4c5c68;
   font-size: 2rem;
   color: #c1cad6;
+}
+@media (max-width: 500px) {
+  .copyrightFooter {
+    font-size: 1rem;
+  }
 }
