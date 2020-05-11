@@ -185,6 +185,8 @@ header{
 	h4{
 		@media(max-width:500px){
 			font-size:2rem;
+			border-bottom:1px solid @accent-color;
+
 			}
 		font-size:3rem;
 		.paddingMid();
@@ -220,10 +222,19 @@ header{
 
 // section styles START HERE
 section {
+	@media(max-width:500px){
+	.center();
+	flex-direction:column;
+	}
 	display:flex;
 	justify-content:space-between;
 	padding:3% 0%;
 	.aboutMe{
+		@media(max-width:500px){
+		width:100%;
+		text-align:center;
+		padding-bottom:3%
+		}
 		width:40%;
 		h2{
 			font-size:4rem;
@@ -235,6 +246,11 @@ section {
 		}
 	}
 	.StuffImGoodAt{
+		@media(max-width:500px){
+			width:100%;
+			text-align:center;
+			padding-bottom:3%
+			}
 		width:40%;
 		h3{
 			font-size:3rem;
