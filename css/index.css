@@ -143,10 +143,22 @@ nav {
   display: flex;
   justify-content: flex-end;
 }
+@media (max-width: 500px) {
+  nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
 nav a {
   padding: 2%;
   font-size: 2.5rem;
   color: #4c5c68;
+}
+@media (max-width: 500px) {
+  nav a {
+    font-size: 2rem;
+  }
 }
 nav a:hover {
   color: #c1cad6;
@@ -241,7 +253,7 @@ header ul li {
 }
 @media (max-width: 500px) {
   header ul li {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 }
 header a {
@@ -300,6 +312,7 @@ section .aboutMe h2 {
 section .aboutMe p {
   font-size: 2rem;
   padding: 0% 0 1.5% 0;
+  margin-top: 3%;
 }
 section .StuffImGoodAt {
   width: 40%;
@@ -311,13 +324,14 @@ section .StuffImGoodAt {
     padding-bottom: 3%;
   }
 }
-section .StuffImGoodAt h3 {
-  font-size: 3rem;
+section .StuffImGoodAt h2 {
+  font-size: 4rem;
   padding: 1.5% 0;
 }
 section .StuffImGoodAt table {
   font-size: 2rem;
-  padding: 0% 0 1.5% 0;
+  padding: 1.5% 0;
+  margin-top: 3%;
 }
 section .StuffImGoodAt table td {
   border: 1px solid gray;
@@ -329,18 +343,18 @@ footer h3 {
   padding: 1.5% 0;
 }
 footer table {
-  font-size: 2rem;
+  font-size: 1.6rem;
   padding: 0% 0 1.5% 0;
   text-align: left;
+  width: 100%;
 }
 footer table th {
-  border-bottom: 1px solid gray;
   border-top: 1px solid gray;
   padding: 2%;
   font-weight: 1000;
 }
 footer table td {
-  border-bottom: 1px solid gray;
+  border-top: 1px solid gray;
   padding: 2%;
 }
 footer table tr:nth-child(even) {
