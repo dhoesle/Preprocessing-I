@@ -54,6 +54,279 @@ table {
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
+	font-size:62.5%;
+
 }
+body{
+	margin:1% 5%;
+	font-family: 'DM Mono', monospace;
+
+}
+// variables GO HERE
+@main-color: #c1cad6;
+@accent-color: #4c5c68;
+@font-color: #46494c;
+
+// mix ins GO HERE
+.boldFont(){
+	font-weight: 1000;
+}
+
+.button(){
+	border-radius:10px;
+	.center();
+	padding:2% 1%;
+	width:17%;
+	background-color:@accent-color;
+	color: @main-color;
+	font-size:2.5rem;
+	@media(max-width:500px){
+		.paddingMobile();
+		width:100%;
+	}
+}
+.paddingTop(){
+	padding: 1.5% 0;
+}
+.paddingMid(){
+	padding:0% 0 1.5% 0;
+}
+.paddingMobile(){
+	padding:5% 2%;
+}
+.center(){
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+.right(){
+	display:flex;
+	justify-content:flex-end;
+}
+.left(){
+	display:flex;
+	justify-content:flex-end;
+	flex-direction:column;
+}
+// general styles START HERE
+
+
+// general styles END HERE
+
+// nav styles START HERE
+nav{
+	@media(max-width:500px){
+	.center();
+	}
+	.right();
+	a {
+		padding:2%;
+		font-size:2.5rem;
+		color:@accent-color;
+		@media(max-width:500px){
+			font-size:2rem;
+		}
+
+	}
+	a:hover{
+		color:@main-color;
+	}
+}
+
+
+// nav styles END HERE
+
+// header styles START HERE
+header{
+	@media(max-width:500px){
+		.center();
+		padding:2%;
+	}
+	.left();
+	padding:5% 2%;
+	background-color:@main-color;
+	border-radius:5px;
+	img{
+		@media(max-width:500px){
+		width: 90%;	
+		}
+		width:30%;
+		height:30%;
+		.paddingTop();
+		border-radius:5rem 5rem;
+	}
+	h1{
+		@media(max-width:500px){
+			font-size: 2.5rem;
+			.boldFont();
+			.paddingMobile();
+			text-align: center;
+
+		}
+		font-size:5rem;
+		.paddingMid();
+	}
+	.border{
+		border-bottom:1px solid @accent-color;
+	}
+	h3{
+		.boldFont();
+		font-size:4rem;
+		@media(max-width:500px){
+			.paddingMobile();
+			border-bottom:1px solid @accent-color;
+			width:100%;
+			text-align:center;
+
+		}
+	}
+	p{
+		@media(max-width:500px){
+			font-size:1.9rem;
+			text-align:center;
+			letter-spacing:1%;
+			.paddingMobile();
+
+			}
+		font-size:1.9rem;
+		.paddingMid();
+
+	}
+	h4{
+		@media(max-width:500px){
+			font-size:2rem;
+
+			}
+		font-size:3rem;
+		.paddingMid();
+		.boldFont();
+
+	}
+	ul{
+		@media(max-width:500px){
+			.paddingMobile();
+		}
+		.paddingTop();
+		li{
+			.paddingTop();
+			font-size:1.9rem;
+			@media(max-width:500px){
+				font-size:1.2rem;
+			}
+		}
+	}
+	a{
+		@media(max-width:500px){
+			.paddingMobile();
+		}
+		.center();
+		.button();
+	}	
+	a:hover{
+		color:@font-color;
+		background-color:@main-color;
+	}
+}
+// header styles END HERE
+
+// section styles START HERE
+section {
+	@media(max-width:500px){
+	.center();
+	flex-direction:column;
+	}
+	display:flex;
+	justify-content:space-between;
+	padding:3% 0%;
+	.aboutMe{
+		@media(max-width:500px){
+		width:100%;
+		text-align:center;
+		padding-bottom:3%
+		}
+		width:40%;
+		h2{
+			font-size:4rem;
+			.paddingTop();
+		}
+		p{
+			font-size:2rem;
+			.paddingMid();
+			margin-top:3%;
+
+		}
+	}
+	.StuffImGoodAt{
+		@media(max-width:500px){
+			width:100%;
+			text-align:center;
+			padding-bottom:3%
+			}
+		width:40%;
+		h2{
+			font-size:4rem;
+			.paddingTop();
+		}
+		table{
+			font-size:2rem;
+			.paddingTop();
+			margin-top:3%;
+
+			td{
+				border:1px solid gray;
+				padding:3%;
+				border-radius:10px;
+
+			}
+		}
+	}
+}
+// section styles END HERE
+
+// footer styles START HERE
+footer{
+	h3{
+		font-size:3rem;
+		.paddingTop();
+	}
+	table{
+		font-size:1.6rem;
+		.paddingMid();
+		text-align:left;
+		width:100%;
+		th{
+			border-top:1px solid gray;
+			padding:2%;
+			font-weight: 1000;
+
+		}
+		td{
+			border-top:1px solid gray;
+			padding:2%;
+		}
+		tr:nth-child(even){
+			background-color:@main-color;
+		}
+	}
+}
+
+
+// footer styles END HERE
+
+// copyrightFooter styles START HERE
+.copyrightFooter{
+	.center();
+	padding:3% 10%;
+	margin: 1% -2% 0 -2%;
+	background-color:@accent-color;
+	font-size:2rem;
+	color:@main-color;
+	@media(max-width:500px){
+		font-size:1rem;
+	}
+
+}
+
+// copyrightFooter syles END HERE
 
